@@ -17,7 +17,6 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'generate-walmart-auth-keys=walmart_auth.bin.generate_keys:main',
             'walmart-session=walmart_auth.bin.session:main'
         ]
     }
