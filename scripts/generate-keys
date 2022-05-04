@@ -1,0 +1,18 @@
+#!/usr/bin/env bash -o errexit
+ROOT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/.."
+cd "$ROOT_DIR"
+
+
+# make keys in secrets/
+mkdir -p secrets
+cd secrets
+
+# generate key pair 2048 bit
+# note: -des3
+openssl genrsa -out rsa_key_pair 2048
+
+# export private key
+openssl pkcs8 -topk8 -inform PEM -in rsa_key_pair -outform PEM -out private_key.pem -nocrypt
+
+# export public key
+openssl rsa -in private_key.pem -pubout > public_key.pem
