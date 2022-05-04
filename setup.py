@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='requests-walmart-auth',
-    version='1.0.0',
+    version='1.0.1',
     description='python requests support for the Walmart Affiliate Marketplace (REST) API required Additional Headers',
     url='https://github.com/Terrabits/requests-walmart-auth',
     author='Nick Lalic',
