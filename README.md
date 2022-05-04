@@ -55,33 +55,6 @@ session.get('https://...')
 
 ## Command Line Tools
 
-### `generate-walmart-auth-keys`
-
-This command line tool generates new key files as required for `Additional Headers`. This may come in handy in operating systems such as Windows that do not include tools like `openssh` by default.
-
-From the help menu:
-
-```comment
-usage: generate-walmart-auth-keys [-h] secrets_path [passphrase]
-
-generate keys for use with requests-walmart-auth
-
-positional arguments:
-  secrets_path
-  passphrase
-
-options:
-  -h, --help    show this help message and exit
-```
-
-Three files are generated:
-
-- `$SECRETS_PATH/public_key.pem`
-- `$SECRETS_PATH/private_key.pem`
-- `$SECRETS_PATH/public_key.b64.txt`
-
-The last file is generated as a convenience: `Walmart.io` requires you to copy-paste the `public_key` without the `PEM` header and footer.
-
 ### `walmart-session`
 
 This command line tool creates a new `WalmartSession` and provides a python REPL for experimentation.
